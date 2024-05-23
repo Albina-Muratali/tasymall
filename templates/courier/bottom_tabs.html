@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bottom Navigation Bar</title>
+    <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* CSS styles for the bottom navigation bar */
+        .bottom-tabs {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            display: flex;
+            background-color: white;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0);
+            text-align: center;
+        }
+
+        /* Styles for each tab */
+        .bottom-tabs > a {
+            flex: 1;
+            padding: 5px;
+            text-decoration: none;
+            position: relative; /* Added to position the line */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Styles for the horizontal line */
+        .bottom-tabs > a::after {
+            content: '';
+            position: absolute;
+            bottom: 50%;
+            left: 0;
+            width: 100%; /* Full width */
+            height: 1px; /* Height of the line */
+            background-color: #ccc; /* Color of the line */
+        }
+
+        /* Styles for the label text */
+        .bottom-tabs > a > span {
+            font-size: 13px;
+            font-weight: bold;
+            display: block;
+            margin-top: 5px;
+        }
+
+        /* Styles for the icon */
+        .bottom-tabs > a > i {
+            font-size: 20px;
+        }
+
+        /* Styles for the active tab */
+        .bottom-tabs > a.active {
+            color: #FFC106; /* Color for the active tab */
+        }
+    </style>
+</head>
+<body>
+    <!-- HTML structure for the bottom navigation bar -->
+    <div class="bottom-tabs d-flex">
+        <a href="#" class="active">
+            <i class="fas fa-map-marked-alt"></i> <!-- Icon for Available Jobs -->
+            <span>Available Jobs</span> <!-- Label for Available Jobs -->
+        </a>
+        <a href="#">
+            <i class="fas fa-archive"></i> <!-- Icon for My Jobs -->
+            <span>My Jobs</span> <!-- Label for My Jobs -->
+        </a>
+        <a href="#">
+            <i class="fas fa-user"></i> <!-- Icon for Profile -->
+            <span>Profile</span> <!-- Label for Profile -->
+        </a>
+    </div>
+</body>
+</html>
